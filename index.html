@@ -1156,7 +1156,7 @@ building performance phenomena (such as building energy use)? Moreover, what is 
     <p>The Urban environment is very diverse. There is no universal way to standardize the rules needed to interpret different contexts around the world.
     Some of those diversities are represented in the form of the following parameters; building heights, density, urban vegetation, design styles, construction period and building materials.   </p>
   <strong>Challenge 2: Method Matching Needed</strong><br/>
-    <p>The challenge here lies in selecting extraction methods that match the task at hand. For instance, if extracting facade areas is required, then applying standard bounding box detection would be
+    <p>The challenge here lies in selecting extraction methods that match the task at hand. For instance, if extracting segmented facade areas is required, then applying standard bounding box detection would be
     insufficient. This is expanded upon in the experiments section when an example extraction task is carried out and assessed.</p>
 
     <strong>Challenge 3: Data Quality</strong><br/>
@@ -1235,10 +1235,10 @@ area, categorized under their respective methods and models:</p>
   <strong>Grammar Based Methods</strong><br/>
     <p>These approaches center on procedural shape grammar  definitions.  At a high level, this method is usually made up of a set of
         hand-crafted rules of basic shapes  which  represents  structured  geometries encoded as parametric sub-divisions.
-        These rules can then applied to images to make deductions on hierarchies and the presence of certain elements. Although intuitive to construct,
+        These rules can then be applied to images to make deductions on hierarchies and the presence of certain elements. Although intuitive to construct,
     hand-crafted features, based on methods such as sobel operators, usually suffer when handling more diverse conditions, especially
         when dealing with noisy street view imagery and architectural styles that fall outside the
-    constrained set of pre-defined rules. In addition to this, the extensive computational time does not justify the limited inference capacity. </p>
+    constrained set of pre-defined rules. In addition to this, the extensive computational time does not justify the limited inference capability. </p>
   <strong>Learning Based Methods</strong><br/>
     <h5>CNNs</h5><br/>
     <p>Recently, Convolutional Neural Networks (CNNs) have dominated image analysis tasks due to their superior performance across classification, object detection,
