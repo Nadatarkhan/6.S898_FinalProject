@@ -1610,10 +1610,10 @@ area, categorized under their respective methods and models:</p>
     <li>Datasets are becoming richer as more facade classes are also making appearances in public datasets (such as balconies, cornices, staircases etc.)</li></p>
     <li>Transfer Learning and data augmentation are becoming more standard practices in the field</li></p>
     <p>In order to select the appropriate method of extraction, the end goal of the assessment must be clear. To
-    present a degree of specificity to the subject matter, the below presents the custom case study of extracting window to wall ratios for energy and daylight studies.
+    present a degree of specificity to the subject matter, the below presents the customized extraction task of window to wall ratios for energy and daylight studies.
     In these studies, the window to wall ratio is a large driver behind thermal envelope performance as well as daylight access. For more granular assessments, deriving
-    the exact window area would be needed hence, bounding box methods indicating location would not be sufficient in this case. Similarly, we can argue
-    that for applications requiring height estimation, it would be beneficial to have calibrated (actual) building height rather than a ratio/proportion between the different
+    the exact window area would be needed hence, bounding box methods indicating location of windows (with imprecise annotation geometry) would not be sufficient in this case. Similarly, we can argue
+    that for applications requiring height estimation, it would be beneficial to have calibrated (actual) building heights rather than a ratio/proportion between the different
     object heights in a scene (Trees, buildings etc.)</p>
 
 
@@ -1668,19 +1668,20 @@ area, categorized under their respective methods and models:</p>
 <!--/PART 5:EXPERIMENTS-->
 <h2 id="experiments">Experiments</h2>
     <strong>Model Description</strong><br/>
-    <p>For the sake of experimentation, we utilize a framework developed by Li, Chuan-Kang, et al [1]. The method employs a key-point detection framework that utilizes CNNs
+    <p>To experiment with the use of CNNS in window detection, we utilize a framework developed by Li, Chuan-Kang, et al [1]. The method employs a key-point detection framework that utilizes CNNs
     to make predictions on the presence of window geometry by identifying corners. Resnet is utilized as the backbone network followed by 2 prediction
     branches. One provides heatmaps (for corner points) while the other provides tagmaps (based on grouping of windows and center verification).
-    The below table summarizes the model parameters </p>
+ </p>
 
     <p>The input image is fed into the CNN architecture,
     called the backbone. It is a pre-trained standard convolutional neural network, using ResNet to detect low resolution features.
     The backbone network acts as a  feature extractor over an entire image.
 
-    <p>This workflow along with model parameters is highlighted below.</p>
+    <p>This workflow along with the model parameters is highlighted below.</p>
     <div class="layout-chunk" data-layout="l-page">
         <div class="grid column">
             <div class="row"><img src="images/model2.png" alt="imgCH"/></div>
+            <p> <i> Summary of CNN detection method utilized </i> </p>
         </div>
     </div>
 
